@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import "./MovieControls.scss";
 
 export const MovieControls = ({ type, movie }) => {
   const {
@@ -10,33 +11,33 @@ export const MovieControls = ({ type, movie }) => {
   } = useContext(GlobalContext);
 
   return (
-    <div className="inner-card-controls">
+    <div className="controls">
       {type === "watchlist" && (
         <>
-          <button className="ctrl-btn" onClick={() => addMovieToWatched(movie)}>
-            <i className="fa-fw far fa-eye"></i>
+          <button className="controls-btn" onClick={() => addMovieToWatched(movie)}>
+            <i className="controls-text">Add to Watched List</i>
           </button>
 
           <button
-            className="ctrl-btn"
+            className="controls-btn"
             onClick={() => removeMovieFromWatchlist(movie.id)}
           >
-            <i className="fa-fw fa fa-times"></i>
+            <i className="controls-text">Remove from WatchList</i>
           </button>
         </>
       )}
 
       {type === "watched" && (
         <>
-          <button className="ctrl-btn" onClick={() => moveToWatchlist(movie)}>
-            <i className="fa-fw far fa-eye-slash"></i>
+          <button className="controls-btn" onClick={() => moveToWatchlist(movie)}>
+            <i className="controls-text">Remove from WatchList</i>
           </button>
 
           <button
-            className="ctrl-btn"
+            className="controls-btn"
             onClick={() => removeFromWatched(movie.id)}
           >
-            <i className="fa-fw fa fa-times"></i>
+            <i className="controls-text">Remove from Watched</i>
           </button>
         </>
       )}

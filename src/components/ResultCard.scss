@@ -1,0 +1,17 @@
+.result {
+    margin: 0, auto;
+
+
+    &-controls {
+        margin: 0;
+
+    
+    &__btn {
+        display: flex;
+        width: 50%;
+    }
+    }
+    &-text {
+        color: #fff;
+    }
+}

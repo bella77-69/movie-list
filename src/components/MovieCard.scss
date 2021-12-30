@@ -1,0 +1,9 @@
+.card {
+    margin: 0, auto;
+
+    &-overlay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

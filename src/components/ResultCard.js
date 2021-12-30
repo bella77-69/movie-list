@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Moment from "react-moment";
 import { GlobalContext } from "../context/GlobalState";
+import "./ResultCard.scss";
 
 export const ResultCard = ({ movie }) => {
   const {
@@ -22,29 +23,29 @@ export const ResultCard = ({ movie }) => {
   const watchedDisabled = storedMovieWatched ? true : false;
 
   return (
-    <div className="result-card">
-      <div className="poster-wrapper">
+    <div className="result">
+      <div className="result-wrapper">
         {movie.poster_path ? (
           <img
             src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
             alt={`${movie.title} Poster`}
           />
         ) : (
-          <div className="filler-poster" />
+          <div className="result-poster" />
         )}
       </div>
 
-      <div className="info">
-        <div className="header">
-          <h3 className="title">{movie.title}</h3>
-          <h4 className="release-date">
+      <div className="result-info">
+        <div className="result-header">
+          <h3 className="result-title">{movie.title}</h3>
+          <h4 className="result-date">
             <Moment format="YYYY">{movie.release_date}</Moment>
           </h4>
         </div>
 
-        <div className="controls">
+        <div className="result-controls">
           <button
-            className="btn"
+            className="result-controls__btn"
             disabled={watchlistDisabled}
             onClick={() => addMovieToWatchlist(movie)}
           >
@@ -52,7 +53,7 @@ export const ResultCard = ({ movie }) => {
           </button>
 
           <button
-            className="btn"
+            className="result-controls__btn"
             disabled={watchedDisabled}
             onClick={() => addMovieToWatched(movie)}
           >

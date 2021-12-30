@@ -1,17 +1,18 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { MovieCard } from "./MovieCard";
+import "./Watched.scss";
 
 export const Watched = () => {
   const { watched } = useContext(GlobalContext);
 
   return (
-    <div className="movie-page">
-      <div className="container">
-        <div className="header">
-          <h1 className="heading">Watched Movies</h1>
+    <div className="movie">
+      <div className="movie-container">
+        <div className="movie-header">
+          <h1 className="movie-title">Watched Movies</h1>
 
-          <span className="count-pill">
+          <span className="movie-count">
             {watched.length} {watched.length === 1 ? "Movie" : "Movies"}
           </span>
         </div>
@@ -23,7 +24,7 @@ export const Watched = () => {
             ))}
           </div>
         ) : (
-          <h2 className="no-movies">No movies in your list! Add some!</h2>
+          <h2 className="movies-none">No movies in your list! Add some!</h2>
         )}
       </div>
     </div>

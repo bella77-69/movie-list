@@ -1,17 +1,18 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { MovieCard } from "./MovieCard";
+import "./WatchList.scss";
 
 export const WatchList = () => {
   const { watchlist } = useContext(GlobalContext);
 
   return (
-    <div className="movie-page">
-      <div className="container">
-        <div className="header">
-          <h1 className="heading">My Watchlist</h1>
+    <div className="movie">
+      <div className="movie-container">
+        <div className="movie-card">
+          <h1 className="movie-title">My Watchlist</h1>
 
-          <span className="count-pill">
+          <span className="movie-count">
             {watchlist.length} {watchlist.length === 1 ? "Movie" : "Movies"}
           </span>
         </div>
@@ -23,7 +24,7 @@ export const WatchList = () => {
             ))}
           </div>
         ) : (
-          <h2 className="no-movies">No movies in your list! Add some!</h2>
+          <h2 className="movie-none">No movies in your list! Add some!</h2>
         )}
       </div>
     </div>

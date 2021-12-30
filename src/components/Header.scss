@@ -5,16 +5,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
     }
 
     &-link {
         display: flex;
-        margin-top: 1rem;
-        padding: 10px 0;
+        margin-top: 1.5rem;
+        // padding: 10px 0;
     }
     
     &-title {
@@ -31,6 +27,7 @@
         align-items: center;
         justify-content: space-evenly;
         text-decoration: none;
+        padding: 0;
     }
     &-list {
         list-style: none;
@@ -38,7 +35,7 @@
     
     &__watch {
         text-decoration: none;
-        width: 30%;
+        // width: 30%;
         transition: all 0.3s ease;
         text-transform: uppercase;
         color: #fff;
@@ -50,7 +47,7 @@
 
     &__watched {
         text-decoration: none;
-        width: 30%;
+        // width: 30%;
         transition: all 0.3s ease;
         text-transform: uppercase;
         color: #fff;
@@ -63,11 +60,11 @@
 
     &__add {
         text-decoration: none;
-        padding: 10px 15px;
+        // padding: 10px 15px;
         border-radius: 5px;
         text-transform: uppercase;
         font-weight: 700;
-        display: inline-block;
+        // display: inline-block;
         border: none;
         font-size: 1rem;
         transition: all 0.3s ease;
